@@ -7,6 +7,8 @@ import getCurrentUser from "@/app/actions/getCurrentUser";
 import ClientOnly from "./components/ClientOnly";
 import { error } from "console";
 
+export const dynamic = "force-dynamic";
+
 interface HomeProps {
   searchParams: IListingsParams;
 }
