@@ -1,19 +1,39 @@
-An Airbnb like website where user can log in either with making new account or use their Google or Github accounts by the help of NextAuth library.
+# RentRom - Find Your Perfect Rental Experience
 
-Technologies Used : 
+RentRom is a full-stack web application built with Next.js, React.js, TypeScript, Tailwind CSS, MongoDB, Prisma, and NextAuth.js. It offers users a platform to discover and book their ideal rental experiences, whether it's for a short-term stay or a longer vacation. With RentRom, users can easily create an account, explore available rentals, make bookings, and manage their reservations hassle-free.
 
-• Next JS 13
+## Technologies Used
 
-• React JS
+- **Next.js**: A React framework for building server-rendered and statically generated applications.
+- **React.js**: A JavaScript library for building user interfaces.
+- **TypeScript**: A typed superset of JavaScript that enhances the development experience and helps catch errors early.
+- **Tailwind CSS**: A utility-first CSS framework that allows for rapid UI development.
+- **MongoDB**: A popular NoSQL database for storing and retrieving data efficiently.
+- **Prisma**: A modern database toolkit that provides an ORM (Object-Relational Mapping) and database schema management.
+- **NextAuth.js**: A library for authentication in Next.js applications, enabling users to log in using various providers such as Google and GitHub.
 
-• Typescript
+## Key Features
 
-• Tailwind CSS
+- User Authentication: Users can sign up for a new account or log in using their existing Google or GitHub accounts, thanks to NextAuth.js integration.
+- Rental Search and Filtering: Users can search for available rentals based on location, dates, price range, amenities, and more.
+- Booking Management: Users can view their bookings, make changes, and manage their reservations conveniently.
+- Detailed Rental Listings: Each rental listing provides comprehensive information, including photos, descriptions, amenities, pricing, and availability.
+- Responsive Design: RentRom is fully responsive, ensuring a seamless experience across different devices and screen sizes.
 
-• Mongo DB
+## Getting Started
 
-• Prisma
+To set up and run RentRom locally, follow the steps below:
 
-• NextAuth.js
+1. Clone the repository: `git clone https://github.com/your-username/RentRom.git`
+2. Install the required dependencies: `npm install`
+3. Set up the environment variables: Rename the `.env.example` file to `.env` and provide the necessary values.
+4. Set up the database: Ensure that you have a MongoDB instance running and update the connection details in the `.env` file.
+5. Run the application: `npm run dev`
+6. Access RentRom in your browser: `http://localhost:3000`
+
+
+## License
+
+Feel free to customize the README further based on your specific project details and structure.
 
 Demo: https://rent-rom.vercel.app/
