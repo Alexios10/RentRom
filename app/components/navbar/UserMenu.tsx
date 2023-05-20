@@ -1,6 +1,6 @@
 "use client";
 
-import { useCallback, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import { AiOutlineMenu } from "react-icons/ai";
 import { signOut } from "next-auth/react";
 import { useRouter } from "next/navigation";
@@ -23,6 +23,7 @@ const UserMenu: React.FC<UserMenuProps> = ({ currentUser }) => {
   const loginModal = useLoginModal();
   const registerModal = useRegisterModal();
   const rentModal = useRentModal();
+  const menuRef = useRef(null);
 
   const [isOpen, setIsOpen] = useState(false);
 
@@ -38,8 +39,22 @@ const UserMenu: React.FC<UserMenuProps> = ({ currentUser }) => {
     rentModal.onOpen();
   }, [loginModal, rentModal, currentUser]);
 
+  useEffect(() => {
+    function handleClickOutside(event: { target: any }) {
+      if (menuRef.current && !menuRef.current.contains(event.target)) {
+        setIsOpen(false);
+      }
+    }
+
+    document.addEventListener("mousedown", handleClickOutside);
+
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [menuRef]);
+
   return (
-    <div className="relative">
+    <div ref={menuRef} className="relative">
       <div className="flex flex-row items-center gap-3">
         <div
           onClick={onRent}
@@ -73,7 +88,9 @@ const UserMenu: React.FC<UserMenuProps> = ({ currentUser }) => {
           rounded-full 
           cursor-pointer 
           hover:shadow-md 
-          transition
+          transition¨
+          duration-200 
+          ease-in-out
           "
         >
           <AiOutlineMenu />
@@ -94,7 +111,7 @@ const UserMenu: React.FC<UserMenuProps> = ({ currentUser }) => {
             overflow-hidden 
             right-0 
             top-12 
-            text-sm
+            text-sm 
           "
         >
           <div className="flex flex-col cursor-pointer">
