@@ -4,13 +4,13 @@ RentRom is a full-stack web application built with Next.js, React.js, TypeScript
 
 ## Technologies Used
 
-- **Next.js**: A React framework for building server-rendered and statically generated applications.
-- **React.js**: A JavaScript library for building user interfaces.
-- **TypeScript**: A typed superset of JavaScript that enhances the development experience and helps catch errors early.
-- **Tailwind CSS**: A utility-first CSS framework that allows for rapid UI development.
-- **MongoDB**: A popular NoSQL database for storing and retrieving data efficiently.
-- **Prisma**: A modern database toolkit that provides an ORM (Object-Relational Mapping) and database schema management.
-- **NextAuth.js**: A library for authentication in Next.js applications, enabling users to log in using various providers such as Google and GitHub.
+- **Next.js**
+- **React.js**
+- **TypeScript**
+- **Tailwind CSS**
+- **MongoDB**
+- **Prisma**
+- **NextAuth.js**
 
 ## Key Features
 
